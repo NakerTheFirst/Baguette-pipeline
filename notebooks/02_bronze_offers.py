@@ -1,7 +1,7 @@
 # Databricks notebook source
 # MAGIC %md
 # MAGIC # Bronze: raw JustJoinIt offers
-# MAGIC This notebook loads all 671 daily snapshot files as they are into `workspace.seriously_rubios_baguettes.bronze_offers`. It adds three columns: `snapshot_date`, `source_file` and `ingested_at`. It does no cleaning, filtering or dedup; all of that happens in silver.
+# MAGIC This notebook loads all 671 daily snapshot files as they are into `seriously_rubios_baguettes.bronze.offers`. It adds three columns: `snapshot_date`, `source_file` and `ingested_at`. It does no cleaning, filtering or dedup; all of that happens in silver.
 # MAGIC
 # MAGIC Steps:
 # MAGIC 1. Unzip the Kaggle zip from the `raw` volume into one JSON file per day. Files that already exist are skipped, so reruns are cheap.
@@ -18,10 +18,10 @@ import zipfile
 
 from pyspark.sql import functions as F
 
-VOLUME = "/Volumes/workspace/seriously_rubios_baguettes/raw"
+VOLUME = "/Volumes/seriously_rubios_baguettes/bronze/raw"
 ZIP_PATH = f"{VOLUME}/zip/justjoinit-job-offers-data-2021-10-2023-09.zip"
 JSON_DIR = f"{VOLUME}/json"
-TABLE = "workspace.seriously_rubios_baguettes.bronze_offers"
+TABLE = "seriously_rubios_baguettes.bronze.offers"
 
 # COMMAND ----------
 
