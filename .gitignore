@@ -1,0 +1,41 @@
+# Local-only docs and agent instructions
+references/
+agent_docs/
+AGENTS.md
+
+# Data (never commit the dataset)
+data/
+*.json
+*.jsonl
+*.csv
+*.parquet
+*.zip
+*.gz
+*.tar
+*.7z
+*.xlsx
+
+# Credentials and secrets
+.databrickscfg
+.databricks/
+.env
+.env.*
+*.pem
+*.key
+*token*
+*secret*
+credentials*.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS and editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
