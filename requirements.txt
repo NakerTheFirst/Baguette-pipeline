@@ -1,4 +1,4 @@
-# Local tooling for EDA notebooks in src/ (the pipeline itself runs on Databricks)
+# Local tooling: Kaggle download and ad-hoc local analysis (the pipeline and EDA run on Databricks)
 pandas
 ipykernel
 kaggle
