@@ -1,0 +1,6 @@
+# Local tooling for EDA notebooks in src/ (the pipeline itself runs on Databricks)
+pandas
+ipykernel
+kaggle
+six
+python-dotenv
